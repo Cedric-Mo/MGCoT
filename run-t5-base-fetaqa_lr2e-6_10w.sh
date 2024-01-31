@@ -1,0 +1,28 @@
+TOKENIZERS_PARALLELISM=false CUDA_VISIBLE_DEVICES=0,1 python train_t5.py \
+--model_name_or_path PLM/t5-base \
+--do_train \
+--do_eval \
+--do_predict \
+--train_file dataset/fetaqa_data/train.csv \
+--validation_file dataset/fetaqa_data/dev.csv \
+--test_file dataset/fetaqa_data/test.csv \
+--output_dir checkpoints_fetaqa/checkpoints-t5-base-lr2e-6_15w/t5-base \
+--weight_decay 1e-2 \
+--per_device_train_batch_size 4 \
+--gradient_accumulation_steps 1 \
+--per_device_eval_batch_size 16 \
+--group_by_length \
+--max_source_length 512 \
+--max_target_length 128 \
+--val_max_target_length 128 \
+--num_beams 4 \
+--max_steps 100000 \
+--learning_rate 2e-6 \
+--lr_scheduler_type linear \
+--evaluation_strategy steps \
+--eval_steps 5000 \
+--logging_steps  5000 \
+--save_steps 5000 \
+--dataloader_num_workers 8 \
+--source_prefix "summarize: " \
+--predict_with_generate
