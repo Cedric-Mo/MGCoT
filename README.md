@@ -1,5 +1,8 @@
 # MGCoT: Multi-Grained Contextual Transformer for Table-based Text Generation
 
+## Overview
+![](figure/overview_crop.png)
+
 ## Requirements
 ```bash
 pip install -r requirements.txt
