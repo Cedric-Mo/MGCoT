@@ -18,7 +18,7 @@ You can train your own model following these steps.
 bash run-t5-base-fetaqa.sh
 ```
 ```bash
-run-mgcot-t5-base-fetaqa.sh
+bash run-mgcot-t5-base-fetaqa.sh
 ```
 
 After running the script, you will get trained model weights, training logs, and results in the output folder, including the predicted summaries in 'test_preds_seq2seq.txt'.
