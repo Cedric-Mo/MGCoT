@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ## Train
 You can train your own model following these steps.
 
-1. Download [Pre-trained T5 Model](https://huggingface.co/google-t5/t5-base/tree/main) as save it to the directory 'PLM/t5-base'
+1. Download [Pre-trained T5 Model](https://huggingface.co/google-t5/t5-base/tree/main) and save it to the directory 'PLM/t5-base'
 
 2. Train vanilla T5 model or Train MGCoT T5 Model
 ```bash
